@@ -1,0 +1,217 @@
+
+  /* Global Styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f5f5f5;
+}
+
+/* Welcome Page */
+.welcome-page {
+  height: 100vh;
+  background-image: url('https://i.pinimg.com/736x/51/d1/a7/51d1a7927978063597a4ab198633748f.jpg');
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  padding: 40px;
+  animation: floatAnimation 2s ease-in-out infinite;
+}
+
+.welcome-page::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.6);  /* dark overlay */
+  z-index: 0;
+}
+
+.welcome-page h1,
+.welcome-page p,
+.welcome-page button {
+  position: relative;
+  z-index: 1;
+  animation: floatAnimation 2s ease-in-out infinite;
+}
+
+.welcome-page h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.welcome-page p {
+  max-width: 600px;
+  font-size: 1.1rem;
+  margin: 0 auto 20px;
+}
+
+.welcome-page button {
+  padding: 10px 30px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 25px;
+  background: #ffffff;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.9s ease;
+  animation: floatAnimation 2s ease-in-out infinite;
+}
+
+.welcome-page button:hover {
+  background: #ffd700;
+  color: #000;
+}
+
+/* Blog Grid */
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  animation: floatAnimation 2s ease-in-out infinite;
+}
+
+/* Blog Card */
+.card {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+  padding: 20px;
+  animation: floatAnimation 2s ease-in-out infinite;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h5 {
+  font-weight: 600;
+  font-size: 1.3rem;
+}
+
+.card p {
+  color: #333;
+  font-size: 1rem;
+}
+
+.card button {
+  margin-top: 10px;
+}
+
+.card .btn-success {
+  background-color: black;
+  color: white;
+  border-radius: 20px;
+  padding: 5px 15px;
+  font-size: 0.9rem;
+  transition: all 0.9s ease;
+}
+
+.card .btn-success:hover {
+  background-color: #218838;
+}
+
+.card .btn-danger {
+  background-color: #03023d;
+  color: white;
+  border-radius: 20px;
+  padding: 5px 15px;
+  font-size: 0.9rem;
+  transition: all 0.15s ease;
+}
+
+.card .btn-danger:hover {
+  background-color: #c82333;
+}
+
+.card .like-count {
+  margin-left: 10px;
+  font-size: 1.1rem;
+  color: #777;
+}
+
+.card .author {
+  font-style: italic;
+  font-size: 0.9rem;
+  color: #888;
+  margin-top: 10px;
+}
+
+/* Blog Form */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 600px;
+  margin: 0 auto;
+  animation: floatAnimation 2s ease-in-out infinite;
+}
+
+form input, form textarea {
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+form button {
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  border-radius: 25px;
+  background-color: #e6ebf0;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+form button:hover {
+  background-color: #192027;
+}
+
+/* Container */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 50px 20px;
+  animation: floatAnimation 2s ease-in-out infinite;
+}
+
+/* Header Styling */
+.container h2 {
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 30px;
+  text-align: center;
+  animation: floatAnimation 2s ease-in-out infinite;
+}
+
+/* Enhanced Background */
+body {
+  background: url('https://i.pinimg.com/736x/d5/94/71/d59471525df05b7a3ac86869debbb4fe.jpg');
+  background-size: 100% 100%;
+  animation: gradientAnimation 2s ease infinite;
+}
+
+/* Animation for Background */
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Floating Animation */
+@keyframes floatAnimation {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0); }
+}
