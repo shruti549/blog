@@ -198,7 +198,7 @@ form button:hover {
 /* Enhanced Background */
 body {
   background: url('https://i.pinimg.com/736x/d5/94/71/d59471525df05b7a3ac86869debbb4fe.jpg');
-  background-size: 100% 100%;
+  background-size: cover;
   animation: gradientAnimation 2s ease infinite;
 }
 
